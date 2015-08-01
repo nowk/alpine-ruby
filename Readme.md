@@ -2,6 +2,9 @@
 
 Ruby + Alpine for Rocket ACI conversion.
 
+    FROM nowk/alpine-base:3.2
+
+
 Includes:
 
 * bundler
