@@ -30,7 +30,7 @@ Includes:
 
 __Converting:__
 
-    docker2aci docker://nowk/alpine-ruby:1.4.2
+    docker2aci docker://nowk/alpine-ruby:2.2.2
 
 *Latest version of the actool will properly export the LABEL directives defined 
 in the Dockerfile, else please read below.*
@@ -39,7 +39,7 @@ Because the `arch` label is not exported, we will need to add that in manually
 by extracting, modifying the manifest then rebuilding the ACI before adding to
 our image store.
 
-    tar xvf nowk-alpine-ruby-1.4.2.aci -C alpine-ruby
+    tar xvf nowk-alpine-ruby-2.2.2.aci -C alpine-ruby
 
 Add the `arch` label.
 
@@ -56,11 +56,11 @@ Add the `arch` label.
 
 Rebuild the ACI.
 
-    actool build --overwrite alpine-ruby alpine-ruby-1.4.2-linux-amd64.aci
+    actool build --overwrite alpine-ruby alpine-ruby-2.2.2-linux-amd64.aci
 
 Add to the image store via `rkt fetch`.
 
-    sudo rkt --insecure-skip-verify fetch alpine-ruby-1.4.2-linux-amd64.aci
+    sudo rkt --insecure-skip-verify fetch alpine-ruby-2.2.2-linux-amd64.aci
 
 __Add as a dependency:__
 
@@ -73,7 +73,7 @@ In your app's ACI `manifest`.
             "labels": [
                 {
                     "name": "version",
-                    "value": "1.4.2",
+                    "value": "2.2.2",
                 },
                 {
                     "name": "os",
