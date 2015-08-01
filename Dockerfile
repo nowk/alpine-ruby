@@ -5,9 +5,9 @@ ENV RUBY_MAJOR 2.2
 ENV RUBY_VERSION 2.2.2
 ENV BUNDLER_VERSION 1.10.5
 
-RUN apk --update add \
-    ruby \
-    ruby-bundler \
+RUN apk --update --arch=x86_64 add \
+    ruby=${RUBY_VERSION}-r0 \
+    ruby-bundler=${BUNDLER_VERSION}-r0 \
     ruby-dev \
     ruby-nokogiri \
     && rm -rf /var/cache/apk/*
