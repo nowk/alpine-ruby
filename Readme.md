@@ -12,8 +12,8 @@ Includes:
 
 | Stats             |         |
 | ----------------- | ------- |
-| Docker Image Size | ~68 MB  |
-| Rocket ACI Size   | ~24 MB  |
+| Docker Image Size | ~62 MB  |
+| Rocket ACI Size   | ~23 MB  |
 
 ---
 
