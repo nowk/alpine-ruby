@@ -9,7 +9,6 @@ RUN apk --update --arch=x86_64 add \
     ruby=${RUBY_VERSION}-r0 \
     ruby-bundler=${BUNDLER_VERSION}-r0 \
     ruby-dev \
-    ruby-nokogiri \
     && rm -rf /var/cache/apk/*
 
 ENV GEM_HOME /usr/local/bundle
